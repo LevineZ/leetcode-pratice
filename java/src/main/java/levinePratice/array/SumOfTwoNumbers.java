@@ -26,7 +26,7 @@ public class SumOfTwoNumbers {
         System.out.println(Arrays.toString(twoSum3(nums, target)));
     }
 
-    //时间复杂度n平方
+
         public static int[] twoSum(int[] nums, int target) {
             Map<Integer, Integer> hashtable = new HashMap<Integer, Integer>();
             for (int i = 0; i < nums.length; ++i) {
