@@ -60,6 +60,19 @@ public class Middle24 {
         return ans;
     }
 
+    /**
+     * 递归解法
+     */
+    public static ListNode swapPairsV2(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode ans = head.next, node = head.next.next;
+        ans.next = head;
+        head.next = swapPairsV2(node);
+        return ans;
+    }
+
     public static ListNode generateListNode(int[] nums, int pos) {
         ListNode head = new ListNode(nums[pos]);
         if (pos < nums.length - 1) {
@@ -88,9 +101,9 @@ public class Middle24 {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 3};
+        int[] nums = new int[]{1, 2, 3, 4};
         ListNode head = generateListNode(nums, 0);
-        ListNode ans = swapPairs(head);
+        ListNode ans = swapPairsV2(head);
         System.out.println("ans = " + Arrays.toString(transferListNodeToArray(ans)));
     }
 }
