@@ -1,8 +1,7 @@
-package boom.hard;
-
-import java.util.Arrays;
+package boom.hard.dp;
 
 /**
+ * @author boom
  * 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
  * <p>
  * '.' 匹配任意单个字符
@@ -18,7 +17,7 @@ import java.util.Arrays;
  * 输入：s = "mississippi" p = "mis*is*p*."
  * 输出：false
  * <p>
- * 解法： 动态规划
+ * 解法： 动态规划 DP
  * dp[i][j] 表示s的前i个字符是否和p的前j个字符匹配，最后的结果是dp[s.length()][p.length()]
  */
 public class Hard10 {
