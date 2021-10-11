@@ -1,5 +1,6 @@
 package levinePratice.array;
 
+
 /**
  * 删除有序数组中的重复项（不能使用额外空间）
  *
@@ -23,12 +24,17 @@ public class RemoveDuplicates {
         int q = 1;
         while (q < l) {
             if (originArrays[p] != originArrays[q]) {
-                originArrays[p + 1] = originArrays[q];
+                if (q - p > 1) {
+                    originArrays[p + 1] = originArrays[q];
+                }
                 p++;
             }
             q++;
         }
+        System.out.println(originArrays.toString());
         return p + 1;
     }
+
+
 
 }
